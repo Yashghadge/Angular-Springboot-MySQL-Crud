@@ -1,0 +1,47 @@
+<br><div class="float-end p-3">
+    <nav aria-label="breadcrumb" class="fs-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a  routerLink="">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Car List</li>
+      </ol>
+    </nav>
+    </div>
+    <br>
+    <br><br>
+
+<p class="text-warning">cars-list works!</p>
+<div class="container">
+<table class="table table-hover table-striped table-responsive-md">
+    <thead class=" text-center text-light bg-dark">
+        <th>id</th>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let car of cars">
+       <td>{{car.id}}</td>
+       <td>{{car.name}}</td>
+       <td>{{car.model}}</td>
+       <td>{{car.price | currency:"INR"}}</td>
+       <td><button  (click)="updateCarById(car.id!)" class=" btn btn-warning">Udpate</button> &nbsp;
+        <button class="btn btn-danger" (click)="deleteCar(car.id!)">
+            Delete
+          </button>
+        &nbsp;
+          <button class="btn btn-primary" (click)="carDetails(car.id!)">
+            View
+          </button>
+        
+        </td>
+          
+        </tr>
+    </tbody>
+</table>
+
+<br><br><br>
+<a routerLink="">Back to Home</a>
+</div>
+

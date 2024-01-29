@@ -1,0 +1,50 @@
+<br><div class="float-end p-3">
+    <nav aria-label="breadcrumb" class="fs-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a  routerLink="">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Update Car Details</li>
+        <li class="breadcrumb-item active" aria-current="page"></li>
+      </ol>
+    </nav>
+    </div>
+    <br>
+    <br><br>
+
+<p>update-car works!</p>
+<div class="container float-start ">
+    <div class="card">
+        <h5 class="card-header bg-warning-subtle">Update Car Details</h5>
+       <div class="card-body bg-danger-subtle">
+        <form (ngSubmit)="onUpdate()" >
+        <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter company name" 
+             name="name"
+            [(ngModel)]="car.name">
+            <label for="floatingInput">Comapny Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter car name" name="model"
+            [(ngModel)]="car.model" >
+            <label for="floatingInput">Car Name</label>
+          </div>
+          
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Price"
+            name="price"
+            inputmode="numeric" 
+            [(ngModel)]="car.price">
+            <label for="floatingInput">Price</label>
+          </div>
+        <br>
+        <div class="btn-group gap-3">
+          <!-- <a  class="btn btn-success" type="Submit" (click)="addCar()">Submit</a> -->
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="reset" class="btn btn-danger" >Clear</button>
+        </div>
+      </form>
+   
+       </div>
+     
+    </div>
+</div>
